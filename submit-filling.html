@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Satisfaction Survey form Wizard by Ansonika.">
     <meta name="author" content="Ansonika">
-    <title>New Messege</title>
+    <title>Submit Filling</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -42,7 +42,7 @@
 	</div><!-- /loader_form -->
 
 	<header>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
@@ -55,10 +55,10 @@
 						<div class="collapse navbar-collapse" id="navbarNav">
 						  <ul class="navbar-nav ml-auto">
 							<li class="nav-item">
-							  <a class="nav-link btn1" href="#">Submit Feeling</a>
+							  <a class="nav-link btn1 active" href="submit-filling.html">Submit Feeling</a>
 							</li>
 							<li class="nav-item">
-							  <a class="nav-link btn1 active" href="new-messege.html">New Massege</a>
+							  <a class="nav-link btn1" href="new-messege.html">New Massege</a>
 							</li>
 							<li class="nav-item ">
 								<a class="nav-link btn1 " href="history.html">History</a>
@@ -81,56 +81,195 @@
 	<div class="wrapper_centering">
 	    <div class="container_centering">
 	        <div class="container">
-	            <div class="row">
-					<div class="col-md-6 offset-md-3">
-						<div class="card2">
-							<div class="text-center">
-								<h4>New Messege</h4>
-							</div>
-							<form action="">
-								<div class="form-group">
-									<label for="">Category</label><br>
-								<input type="text" class="form-control"><br>
-								</div>
-								<div class="form-group">
-									<label for="">Location</label><br>
-								<input type="text" class="form-control"><br>
-								</div>
-								<div class="form-group">
-									<label for="">Date Happened</label><br>
-								<input type="text" class="form-control"><br>
-								</div>
-								<div class="form-group">
-									<label for="">Time Happened</label><br>
-								<input type="text" class="form-control"><br>
-								</div>
-								<div class="form-group">
-									<label for="">Problem</label><br>
-								<textarea name="" id="" cols="30" rows="5" class="form-control"></textarea><br>
-								</div>
-								<div class="form-group">
-									<label for="">Suggestion</label><br>
-								<textarea name="" id="" cols="30" rows="5" class="form-control"></textarea><br>
-								</div>
-								
-								
-								
-								
-								
-								
-								<div class="text-center mt-4">
-									<a href="" class="btn1">Submit</a>
-								</div>
-								
-							</form>
-						</div>
-					</div>
+	            <div class="row justify-content-between">
+	                <!-- <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+	                    <div class="main_title_1">
+	                        <h3><img src="img/main_icon_1.svg" width="80" height="80" alt=""> Survey</h3>
+	                        <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
+	                        <p><em>- The Satisfyc Team</em></p>
+	                    </div>
+	                </div> -->
+	                <!-- /col -->
+	                <div class="col-xl-12 col-lg-12">
+	                    <div id="wizard_container">
+	                        <div id="top-wizard">
+	                            <div id="progressbar"></div>
+	                        </div>
+	                        <!-- /top-wizard -->
+	                        <form id="wrapped" method="POST" autocomplete="off">
+	                            <input id="website" name="website" type="text" value="">
+	                            <!-- Leave for security protection, read docs for details -->
+	                            <div id="middle-wizard">
+									
+	                                <div class="step country">
+										<div class="country-img"><img src="img/iStock-493553442.png" alt="" class="img-fluid"></div>
+										
+										
+										<div class="country-section">
+											<h3 class="main_question"><strong>1 of 4</strong>Choose a language</h3>
+											<div class="review_block">
+												<ul>
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="no" name="question_2" class="required" value="No" onchange="getVals(this, 'question_2');">
+															<label class="radio" for="no"></label>
+															<label for="no" class="wrapper">English</label>
+														</div>
+													</li>
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="maybe" name="question_2" class="required" value="Maybe" onchange="getVals(this, 'question_2');">
+															<label class="radio" for="maybe"></label>
+															<label for="maybe" class="wrapper">Korian</label>
+														</div>
+													</li>
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="probably" name="question_2" class="required" value="Probably" onchange="getVals(this, 'question_2');">
+															<label class="radio" for="probably"></label>
+															<label for="probably" class="wrapper">malaysian</label>
+														</div>
+													</li>
+													
+												</ul>
+											</div>
+										</div>
+	                                    
+	                                </div>
+	                                <!-- /step 1-->
 
-					
-				</div>
+	                                <div class="step">
+	                                    <h3 class="main_question mb-4"><strong>2 of 4</strong>Express your feeling</h3>
+										<div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		
+	                                    		
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_1" name="question_1" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_1"><span><img src="img/happy.png" alt=""></span></label>
+	                                                </div>
+	                                            </li>
+												<li>
+													<div class="container_smile">
+													   <input type="radio" id="very_bad_1" name="question_1" class="required" value="Very bad<" onchange="getVals(this, 'question_1');">
+													   <label class="radio smile_1" for="very_bad_1"><span><img src="img/sad.png" alt=""></span></label>
+												   </div>
+											   </li>
+	                                    	</ul>
+	                                    	<div class="row ">
+	                                    		<div class="col-12 mb-2 mt-2 text-center">
+	                                    			<h4 class="text-white">How was your day?</h4>
+													<h6 class="text-white">Please choose an image to express your satisfection feeling</h6>
+	                                    		</div>
+	                                    		
+	                                    	</div>
+	                                    </div>
+	                                    <!-- /review_block-->
+	                                   
+	                                </div>
+	                                <!-- /step 2-->
+
+	                                <div class="step">
+	                                    <h3 class="main_question"><strong>3 of 4</strong>What makes you feel happy today?</h3>
+	                                    <div class="review_block">
+	                                        <ul>
+	                                            <li>
+	                                                <div class="checkbox_radio_container">
+	                                                    <input type="checkbox" id="question_3_opt_1" name="question_3[]" class="required" value="Google and Search Engines" onchange="getVals(this, 'question_3');">
+	                                                    <label class="checkbox" for="question_3_opt_1"></label>
+	                                                    <label for="question_3_opt_1" class="wrapper">Good Dominant friends and family</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="checkbox_radio_container">
+	                                                    <input type="checkbox" id="question_3_opt_2" name="question_3[]" class="required" value="Emails or Newsletter" onchange="getVals(this, 'question_3');">
+	                                                    <label class="checkbox" for="question_3_opt_2"></label>
+	                                                    <label for="question_3_opt_2" class="wrapper">Good working environment</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="checkbox_radio_container">
+	                                                    <input type="checkbox" id="question_3_opt_3" name="question_3[]" class="required" value="Friends or other people" onchange="getVals(this, 'question_3');">
+	                                                    <label class="checkbox" for="question_3_opt_3"></label>
+	                                                    <label for="question_3_opt_3" class="wrapper">Good facility & services</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="checkbox_radio_container">
+	                                                    <input type="checkbox" id="question_3_opt_4" name="question_3[]" class="required" value="Print Advertising" onchange="getVals(this, 'question_3');">
+	                                                    <label class="checkbox" for="question_3_opt_4"></label>
+	                                                    <label for="question_3_opt_4" class="wrapper">Good Management</label>
+	                                                </div>
+	                                            </li>
+	                                            
+	                                        </ul>
+	                                        <small><em>Multiple selections *</em></small>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 3-->
+
+	                               
+
+	                                <div class="submit step">
+	                                    <h3 class="main_question"><strong>4 of 4</strong>Please fill with your details</h3>
+	                                    <div class="form-group">
+	                                        <label for="firstname">Category</label>
+	                                        <input type="text" name="firstname"  class="form-control required">
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="lastname">Location</label>
+	                                        <input type="text" name="lastname"  class="form-control required">
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="email">Date happended</label>
+	                                        <input type="text" name="text"  class="form-control required">
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="telephone">Time happended</label>
+	                                        <input type="text" name="telephone"  class="form-control">
+	                                    </div>
+										<div class="form-group">
+	                                        <label for="telephone">Problem</label>
+	                                        
+											<textarea name="" id="" cols="5" rows="10" class="form-control"></textarea>
+	                                    </div>
+										<div class="form-group">
+	                                        <label for="telephone">Suggestion</label>
+	                                        
+											<textarea name="" id="" cols="5" rows="10" class="form-control"></textarea>
+	                                    </div>
+	                                    <!-- /row -->
+	                                    <!-- <div class="form-group terms">
+	                                        <label class="container_check">Please accept our <a href="index.html#" data-toggle="modal" data-target="#terms-txt" style="color:#fff; text-decoration: underline;">Terms and conditions</a>
+	                                            <input type="checkbox" name="terms" value="Yes" class="required">
+	                                            <span class="checkmark"></span>
+	                                        </label>
+	                                    </div> -->
+	                                </div>
+	                                <!-- /step 5-->
+
+	                            </div>
+	                            <!-- /middle-wizard -->
+
+	                            <div id="bottom-wizard">
+	                                <button type="button" name="backward" class="backward">Prev</button>
+	                                <button type="button" name="forward" class="forward">Next</button>
+	                                <button type="submit" name="process" class="submit">Submit</button>
+	                            </div>
+	                            <!-- /bottom-wizard -->
+
+	                        </form>
+	                    </div>
+	                    <!-- /Wizard container -->
+	                </div>
+	                <!-- /col -->
+	            </div>
 	        </div>
 	        <!-- /row -->
 	    </div>
+	    <!-- /container_centering -->
+	   
 	</div>
 	<!-- /wrapper_centering -->
 
